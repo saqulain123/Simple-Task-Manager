@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager Dashboard</h1>
+        
+
+        <div class="task-input">
+            <input type="text" id="taskTitle" placeholder="Task Title">
+            <textarea id="taskDescription" placeholder="Task Description"></textarea>
+            <input type="date" id="taskDueDate">
+            <select id="taskPriority">
+                <option value="" disabled selected>Set Priority</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        
+
+        <div class="filters">
+            <input type="text" id="searchBox" placeholder="Search tasks...">
+            <select id="filterPriority">
+                <option value="All">All</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <select id="filterStatus">
+                <option value="All">All</option>
+                <option value="Upcoming">Upcoming</option>
+                <option value="Overdue">Overdue</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button id="searchButton">Search</button>
+            <button id="homeButton" style="display: none;">Home</button> <!-- Home button, hidden initially -->
+        </div>
+
+
+        <div id="noTaskMessage" style="display: none; color: red; font-weight: bold;">No Task Found</div>
+       
+
+        <h2>Tasks</h2>
+        <div id="tasksSection">
+            <div class="task-box">
+                <section aria-labelledby="upcomingTasksTitle">
+                    <h3 id="upcomingTasksTitle" class="section-header">📅 Upcoming Tasks</h3>
+                    <div class="task-list-wrapper">
+                        <ul id="upcomingTasks"></ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="task-box">
+                <section aria-labelledby="overdueTasksTitle">
+                    <h3 id="overdueTasksTitle" class="section-header">⚠️ Overdue Tasks</h3>
+                    <div class="task-list-wrapper">
+                        <ul id="overdueTasks"></ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="task-box">
+                <section aria-labelledby="completedTasksTitle">
+                    <h3 id="completedTasksTitle" class="section-header">✅ Completed Tasks</h3>
+                    <div class="task-list-wrapper">
+                        <ul id="completedTasks"></ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
