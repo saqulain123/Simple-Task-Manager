@@ -23,6 +23,7 @@ I used optional chaining in my JavaScript code to safely access properties withi
 // Accessing nested property safely using optional chaining
 const taskPriority = task?.priority ?? 'Low'; // Defaults to 'Low' if priority is undefined
 In this example, task?.priority ensures that if task is undefined or null, it won’t throw an error. Instead, the code will assign 'Low' as the default priority if task.priority is not defined.
+```
 
 ---
 
@@ -53,3 +54,5 @@ If I had more time, I would consider adding the following features to enhance fu
 - *Mobile Optimization*: Further refine the design and interactions for mobile devices to improve the experience on smaller screens.
 
 These additional features would make the application more comprehensive and enhance the overall user experience.
+
+---
